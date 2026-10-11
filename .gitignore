@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Production build (optional if tracking dist, but usually dist is included or deployed; let's check if dist is needed or not. For static portfolio repos, users often keep dist or push root. Let's see)
+# Local env files
+.env
+.env.local
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+*.log

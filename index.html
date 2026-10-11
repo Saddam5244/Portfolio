@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Best Practices -->
+  <title>Saddam Ahmad | MERN Stack Developer & Software Engineer</title>
+  <meta name="description" content="Portfolio of Saddam Ahmad - MERN Stack Developer, AI Enthusiast, and B.Tech CSE student at UPTTI Kanpur. Creator of WeatherGPT, AI-based Phishing Detection System, and Placement Prediction ML.">
+  <meta name="keywords" content="Saddam Ahmad, MERN Stack Developer, WeatherGPT, Saddam5244, UPTTI Kanpur, React, Node.js, MongoDB, JavaScript, Java DSA, CodeAlpha Intern, Portfolio">
+  <meta name="author" content="Saddam Ahmad">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Saddam Ahmad | MERN Stack Developer & Software Engineer">
+  <meta property="og:description" content="Explore projects including WeatherGPT, AI Phishing Detection, and Machine Learning systems built by Saddam Ahmad.">
+  <meta property="og:image" content="assets/avatar.jpg">
+  <meta property="og:url" content="https://github.com/Saddam5244">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/avatar.jpg">
+
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dynamic Background Atmosphere -->
+  <div class="bg-ambient-layer">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+  <div class="bg-grid-overlay"></div>
+  <canvas id="canvas-particles"></canvas>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" id="main-navbar" aria-label="Main Navigation">
+      <a href="#hero" class="brand-logo" id="nav-brand-logo">
+        <div class="brand-badge">SA</div>
+        <span>Saddam<span class="text-gradient">.dev</span></span>
+      </a>
+
+      <ul class="nav-links" id="desktop-nav-links">
+        <li><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-link-skills">Skills</a></li>
+        <li><a href="#weathergpt-spotlight" class="nav-link" id="nav-link-weathergpt" style="color:#67e8f9;"><i class="fas fa-cloud-sun"></i> WeatherGPT</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-link-projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" id="nav-link-experience">Experience</a></li>
+        <li><a href="#education" class="nav-link" id="nav-link-education">Education</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-sound-toggle" id="btn-sound-toggle" title="Toggle Sound Feedback" aria-label="Toggle sound feedback">
+          <i class="fas fa-volume-up" id="sound-icon"></i>
+        </button>
+        <button class="btn-nav-cta btn-open-resume" id="btn-nav-resume">
+          <i class="fas fa-file-alt"></i> Resume
+        </button>
+        <button class="mobile-toggle" id="btn-mobile-toggle" aria-label="Open Mobile Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-badge">SA</div>
+        <span>Saddam Ahmad</span>
+      </div>
+      <button class="mobile-toggle drawer-close" id="btn-drawer-close" aria-label="Close Mobile Menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#hero" class="drawer-link"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#about" class="drawer-link"><i class="fas fa-user-circle"></i> About Me</a></li>
+      <li><a href="#skills" class="drawer-link"><i class="fas fa-code"></i> Skills Matrix</a></li>
+      <li><a href="#weathergpt-spotlight" class="drawer-link" style="color:#67e8f9;"><i class="fas fa-cloud-sun"></i> WeatherGPT AI</a></li>
+      <li><a href="#projects" class="drawer-link"><i class="fas fa-laptop-code"></i> Projects</a></li>
+      <li><a href="#experience" class="drawer-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="#education" class="drawer-link"><i class="fas fa-graduation-cap"></i> Education & Certs</a></li>
+      <li><a href="#contact" class="drawer-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
+    </ul>
+    <div style="margin-top:auto; display:flex; flex-direction:column; gap:0.75rem;">
+      <button class="btn-primary btn-open-resume" style="width:100%; justify-content:center;">
+        <i class="fas fa-file-alt"></i> View Full CV
+      </button>
+    </div>
+  </aside>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="app-container">
+      <div class="hero-grid">
+        
+        <!-- Hero Left Column -->
+        <div class="hero-content">
+          <div class="status-badge" id="hero-status-badge">
+            <span class="status-indicator"></span>
+            <span>Available for Internships & Projects | UPTTI Kanpur (3rd Year)</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Saddam Ahmad</span>
+          </h1>
+
+          <div class="hero-typing-box">
+            <span class="typing-prefix">I am a </span>
+            <span class="typing-text" id="typing-text">MERN Stack Developer</span>
+          </div>
+
+          <p class="hero-description">
+            Passionate Computer Science student at <strong>Uttar Pradesh Textile Technology Institute (UPTTI), Kanpur</strong>. Specialized in crafting robust full-stack web applications with <strong>MongoDB, Express.js, React.js, and Node.js</strong>, integrating AI solutions like <strong>WeatherGPT</strong>, and solving algorithmic problems with <strong>Java DSA</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-primary" id="hero-btn-projects">
+              <i class="fas fa-rocket"></i> Explore Projects
+            </a>
+            <a href="#weathergpt-spotlight" class="btn-weathergpt-highlight" id="hero-btn-weathergpt">
+              <i class="fas fa-sun"></i> Try WeatherGPT
+            </a>
+            <button class="btn-secondary btn-open-resume" id="hero-btn-resume">
+              <i class="fas fa-file-pdf"></i> View CV
+            </button>
+            <a href="#contact" class="btn-secondary" id="hero-btn-contact">
+              <i class="fas fa-envelope"></i> Let's Connect
+            </a>
+          </div>
+
+          <!-- Quick Metrics Counters -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-number text-gradient-emerald">9.40</span>
+              <span class="metric-label">YGPA (Year 2, B.Tech)</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number text-gradient">54+</span>
+              <span class="metric-label">LeetCode Solved</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number text-gradient-purple">20+</span>
+              <span class="metric-label">GitHub Repositories</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number text-gradient">1</span>
+              <span class="metric-label">Front-End Internship</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Profile Showcase Card -->
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-glow-ring"></div>
+
+            <!-- Floating interactive feature pills -->
+            <div class="floating-chip chip-mern">
+              <i class="fab fa-react" style="color:#8b5cf6;"></i>
+              <span>MERN Stack Specialist</span>
+            </div>
+
+            <div class="avatar-card" id="avatar-card-container">
+              <div class="avatar-image-container">
+                <img src="assets/avatar.jpg" alt="Saddam Ahmad - MERN Stack Developer" class="avatar-image" loading="lazy">
+                <div class="avatar-overlay-badge">
+                  <div class="avatar-name-title">
+                    <h4>Saddam Ahmad</h4>
+                    <span>B.Tech CSE '28 • Kanpur</span>
+                  </div>
+                  <div class="status-indicator" title="Active developer"></div>
+                </div>
+              </div>
+
+              <!-- Social icon buttons -->
+              <div class="avatar-socials">
+                <a href="https://github.com/Saddam5244" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile: Saddam5244" id="social-link-github">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/saddam-ahmad-020430323" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile" id="social-link-linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/saddam8424" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="X (Twitter) @saddam8424" id="social-link-twitter">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://instagram.com/jawan8423" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Instagram @jawan8423" id="social-link-instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@NeuralTalesSaddam" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="YouTube Channel" id="social-link-youtube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a href="mailto:ahmadsaddam443@gmail.com" class="social-icon-btn" title="Email: ahmadsaddam443@gmail.com" id="social-link-email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED SPOTLIGHT: WEATHERGPT INTERACTIVE SECTION -->
+  <section class="weathergpt-spotlight-section" id="weathergpt-spotlight">
+    <div class="app-container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-sparkles"></i> Spotlight Innovation</span>
+        <h2 class="section-title">WeatherGPT: <span class="text-gradient">Agricultural AI Intelligence</span></h2>
+        <p class="section-desc">
+          Created specifically for farmers and agriculturalists ("for farmer's"), combining real-time meteorological sensor feeds with OpenAI GPT reasoning to deliver hyper-localized crop management and climate foresight.
+        </p>
+      </div>
+
+      <div class="weathergpt-spotlight-card">
+        
+        <!-- Left details panel -->
+        <div class="spotlight-info-panel">
+          <div>
+            <span class="spotlight-badge"><i class="fas fa-seedling"></i> Smart Farming Platform</span>
+            <h3 class="spotlight-title">AI Weather Forecast & Advisory Engine</h3>
+            <p class="spotlight-desc">
+              Farmers often face severe crop losses due to unpredicted downpours, frost, and high humidity fungal outbreaks. <strong>WeatherGPT</strong> translates raw meteorological metrics into clear, actionable advice in plain language.
+            </p>
+
+            <ul class="spotlight-features-list">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Natural Language Queries:</strong> Farmers can ask directly about watering timing, seed sowing suitability, and fertilizer windows.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Hyper-Local Weather Radar:</strong> Live humidity, precipitation intensity, and temperature tracking tailored for agricultural zones.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Automated Agronomy Safeguards:</strong> Real-time alerts to postpone nitrogen spraying during heavy rain risks to prevent runoff.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Built with Python & APIs:</strong> Powered by OpenAI GPT model integration and high-precision weather APIs.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="spotlight-action-row">
+            <a href="https://github.com/Saddam5244/weatherGPT" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btn-weathergpt-github">
+              <i class="fab fa-github"></i> View Repository on GitHub
+            </a>
+            <button class="btn-secondary btn-card-details" data-project="weathergpt" id="btn-weathergpt-case-study">
+              <i class="fas fa-info-circle"></i> View Architecture
+            </button>
+          </div>
+        </div>
+
+        <!-- Right interactive live simulation panel -->
+        <div class="spotlight-simulator-panel">
+          <div class="simulator-header">
+            <div class="simulator-title">
+              <span class="simulator-radar-dot"></span>
+              <span>Live Simulator: Test WeatherGPT</span>
+            </div>
+            <span class="mono" style="font-size:0.75rem; color:var(--primary);">STATUS: OPERATIONAL</span>
+          </div>
+
+          <!-- Search & preset bar -->
+          <div class="simulator-search-box">
+            <input type="text" id="sim-city-input" class="sim-input" placeholder="Type city or district (e.g. Kanpur, Azamgarh, Pune)..." value="Kanpur" aria-label="City search for WeatherGPT">
+            <button class="sim-btn-predict" id="sim-search-btn" aria-label="Run WeatherGPT Simulation">
+              <i class="fas fa-bolt"></i> Predict
+            </button>
+          </div>
+
+          <div class="city-preset-pills">
+            <span class="preset-pill active" data-city="Kanpur">📍 Kanpur (College)</span>
+            <span class="preset-pill" data-city="Azamgarh">📍 Azamgarh (Home)</span>
+            <span class="preset-pill" data-city="Lucknow">📍 Lucknow</span>
+            <span class="preset-pill" data-city="Delhi">📍 Delhi</span>
+            <span class="preset-pill" data-city="Bengaluru">📍 Bengaluru</span>
+            <span class="preset-pill" data-city="Mumbai">📍 Mumbai</span>
+          </div>
+
+          <!-- Dynamic Live Weather Result Box -->
+          <div class="sim-weather-card">
+            <div class="sim-top-row">
+              <div class="sim-location-info">
+                <h4 id="sim-loc-name">Kanpur</h4>
+                <span id="sim-loc-state">Uttar Pradesh</span>
+              </div>
+              <div class="sim-temp-display">
+                <span class="sim-temp-val" id="sim-temp-val">29</span>
+                <span class="sim-temp-unit">°C</span>
+              </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="sim-stats-grid">
+              <div class="sim-stat-box">
+                <span class="sim-stat-label"><i class="fas fa-tint"></i> Humidity</span>
+                <span class="sim-stat-val" id="sim-hum">68%</span>
+              </div>
+              <div class="sim-stat-box">
+                <span class="sim-stat-label"><i class="fas fa-wind"></i> Wind</span>
+                <span class="sim-stat-val" id="sim-wind">12 km/h NE</span>
+              </div>
+              <div class="sim-stat-box">
+                <span class="sim-stat-label"><i class="fas fa-cloud-showers-heavy"></i> Rain Risk</span>
+                <span class="sim-stat-val" id="sim-rain">15% Low</span>
+              </div>
+            </div>
+
+            <!-- AI Farm Advisory Box -->
+            <div class="sim-ai-advisory">
+              <div class="sim-advisory-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="sim-advisory-content">
+                <h5 id="sim-adv-title">🌾 Crop Advisory for Kanpur (Wheat & Mustard)</h5>
+                <p id="sim-adv-text">
+                  Soil moisture is optimal for germination. Low precipitation chance over 48 hours; irrigation is balanced. Ideal window for early morning fertilization.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div style="font-size:0.75rem; color:var(--text-subtle); display:flex; justify-content:space-between; align-items:center;">
+            <span><i class="fas fa-robot"></i> Powered by OpenAI GPT + Meteorological Sensors</span>
+            <span class="mono">v2.4 Agri-Engine</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about">
+    <div class="app-container">
+      <div class="section-header">
+        <span class="section-tag purple"><i class="fas fa-user-astronaut"></i> Background</span>
+        <h2 class="section-title">Driven by Curiosity, <span class="text-gradient">Engineered with Purpose</span></h2>
+        <p class="section-desc">
+          Balancing computer science theory, full-stack web applications, and data structure problem-solving with collaborative campus leadership.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Narrative Column -->
+        <div class="about-narrative">
+          <p>
+            I am a 3rd-year <strong>B.Tech Computer Science & Engineering</strong> student at <strong>Uttar Pradesh Textile Technology Institute (UPTTI), Kanpur</strong>, with an outstanding academic record of <strong>9.40 YGPA in Year 2</strong> and <strong>8.41 YGPA in Year 1</strong>.
+          </p>
+          <p>
+            My engineering focus spans modern web architecture, where I build reactive, accessible, and fast full-stack applications with <strong>MongoDB, Express.js, React.js, and Node.js</strong>. Having concluded a productive <strong>Front-End Developer Internship at CodeAlpha</strong>, I take pride in clean code, responsive micro-interactions, and secure API integrations.
+          </p>
+          <p>
+            Beyond frontend aesthetics, I am passionate about data-driven intelligence: I engineered an <strong>AI-Based Phishing Detection & Prevention System</strong> to defend against look-alike spoof domains, authored <strong>WeatherGPT</strong> to support farming communities with agricultural forecasts, and designed a <strong>Placement Prediction ML Model</strong> analyzing 100,000 student records.
+          </p>
+
+          <div class="about-highlights-list">
+            <div class="highlight-box">
+              <i class="fas fa-laptop-code"></i>
+              <h4>Full-Stack Engineering</h4>
+              <span>MERN Stack, REST APIs, Secure Auth & State Management</span>
+            </div>
+            <div class="highlight-box">
+              <i class="fas fa-terminal"></i>
+              <h4>Algorithms & DSA</h4>
+              <span>54+ LeetCode problems solved with Java & OOP principles</span>
+            </div>
+            <div class="highlight-box">
+              <i class="fas fa-shield-alt"></i>
+              <h4>Cybersecurity Focus</h4>
+              <span>Look-alike domain detection, real-time phishing warning alerts</span>
+            </div>
+            <div class="highlight-box">
+              <i class="fas fa-users-cog"></i>
+              <h4>Campus Leadership</h4>
+              <span>Active Club Coordinator & Social Service Co-Coordinator at UPTTI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic & Leadership Cards Column -->
+        <div class="about-cards-column">
+          <!-- Leadership Card -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-card-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="info-card-title">
+                <h3>Campus Leadership Roles</h3>
+                <span>Uttar Pradesh Textile Technology Institute, Kanpur</span>
+              </div>
+            </div>
+
+            <div class="leadership-item">
+              <div class="lead-icon"><i class="fas fa-star"></i></div>
+              <div class="lead-content">
+                <h4>Coordinator, Activity Club – UPTTI Kanpur</h4>
+                <p>Organized technical hackathons, cultural festivals, and skill-building workshops, leading student volunteers and coordinating with faculty members.</p>
+              </div>
+            </div>
+
+            <div class="leadership-item">
+              <div class="lead-icon"><i class="fas fa-hands-helping"></i></div>
+              <div class="lead-content">
+                <h4>Co-Coordinator, Social Service Club – UPTTI Kanpur</h4>
+                <p>Supported social awareness campaigns, student blood donation drives, and community outreach initiatives across Kanpur.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Philosophy & Hobbies Card -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-card-icon cyan">
+                <i class="fas fa-palette"></i>
+              </div>
+              <div class="info-card-title">
+                <h3>Interests & Lifestyle</h3>
+                <span>Balancing Analytical & Creative Mindsets</span>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+              <span class="skill-badge"><i class="fas fa-table-tennis" style="color:#06b6d4;"></i> Badminton Enthusiast</span>
+              <span class="skill-badge"><i class="fas fa-pencil-alt" style="color:#8b5cf6;"></i> Drawing & Sketching</span>
+              <span class="skill-badge"><i class="fas fa-code-branch" style="color:#10b981;"></i> Building Open Source Apps</span>
+              <span class="skill-badge"><i class="fas fa-book-reader" style="color:#f59e0b;"></i> Exploring AI Research</span>
+              <span class="skill-badge"><i class="fas fa-film" style="color:#ec4899;"></i> Video Editing & Motion Graphics</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS MATRIX SECTION -->
+  <section id="skills">
+    <div class="app-container">
+      <div class="section-header">
+        <span class="section-tag emerald"><i class="fas fa-microchip"></i> Capabilities</span>
+        <h2 class="section-title">Technical Skills & <span class="text-gradient">Toolkit</span></h2>
+        <p class="section-desc">
+          Proficiencies honed across full-stack development, software engineering courses, internships, and continuous algorithmic problem solving.
+        </p>
+      </div>
+
+      <div class="skills-categories-grid">
+        
+        <!-- Category 1: Languages -->
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <div class="cat-icon-wrap"><i class="fas fa-code"></i></div>
+            <div class="cat-title">
+              <h3>Programming Languages</h3>
+              <span>Foundational & Systems</span>
+            </div>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fab fa-java"></i> Java (DSA & OOP)</span>
+            <span class="skill-badge"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
+            <span class="skill-badge"><i class="fas fa-terminal"></i> C Programming</span>
+            <span class="skill-badge"><i class="fab fa-python"></i> Python (ML / AI)</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Frontend Engineering -->
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <div class="cat-icon-wrap violet"><i class="fab fa-react"></i></div>
+            <div class="cat-title">
+              <h3>Frontend Development</h3>
+              <span>Reactive & Fluid Interfaces</span>
+            </div>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fab fa-react"></i> React.js</span>
+            <span class="skill-badge"><i class="fab fa-html5"></i> HTML5 Semantic</span>
+            <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3 & Animations</span>
+            <span class="skill-badge"><i class="fas fa-wind"></i> Tailwind CSS</span>
+            <span class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap 5</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Backend & APIs -->
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <div class="cat-icon-wrap emerald"><i class="fab fa-node-js"></i></div>
+            <div class="cat-title">
+              <h3>Backend & Middleware</h3>
+              <span>Scalable Web Services</span>
+            </div>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="skill-badge"><i class="fas fa-server"></i> Express.js</span>
+            <span class="skill-badge"><i class="fas fa-network-wired"></i> RESTful APIs</span>
+            <span class="skill-badge"><i class="fas fa-paper-plane"></i> EmailJS Integration</span>
+            <span class="skill-badge"><i class="fas fa-shield-alt"></i> JWT / Auth Security</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Database & Cloud -->
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <div class="cat-icon-wrap"><i class="fas fa-database"></i></div>
+            <div class="cat-title">
+              <h3>Databases & Cloud</h3>
+              <span>Storage & Hosting</span>
+            </div>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fas fa-leaf"></i> MongoDB Atlas</span>
+            <span class="skill-badge"><i class="fas fa-fire"></i> Firebase Auth</span>
+            <span class="skill-badge"><i class="fas fa-cloud-upload-alt"></i> Firebase Hosting</span>
+            <span class="skill-badge"><i class="fas fa-bolt"></i> Vercel Deployment</span>
+            <span class="skill-badge"><i class="fas fa-cloud"></i> Netlify Cloud</span>
+          </div>
+        </div>
+
+        <!-- Category 5: Developer Tools & Design -->
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <div class="cat-icon-wrap violet"><i class="fas fa-tools"></i></div>
+            <div class="cat-title">
+              <h3>Tools & Creative Media</h3>
+              <span>Productivity & Workflows</span>
+            </div>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fab fa-git-alt"></i> Git Version Control</span>
+            <span class="skill-badge"><i class="fab fa-github"></i> GitHub Workflows</span>
+            <span class="skill-badge"><i class="fas fa-paper-plane"></i> Postman API Client</span>
+            <span class="skill-badge"><i class="fas fa-paint-brush"></i> Canva Design</span>
+            <span class="skill-badge"><i class="fas fa-video"></i> Video Editing</span>
+          </div>
+        </div>
+
+        <!-- Category 6: Core & Soft Skills -->
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <div class="cat-icon-wrap emerald"><i class="fas fa-brain"></i></div>
+            <div class="cat-title">
+              <h3>Core & Professional</h3>
+              <span>Leadership & Execution</span>
+            </div>
+          </div>
+          <div class="skill-badges-flow">
+            <span class="skill-badge"><i class="fas fa-puzzle-piece"></i> Problem Solving</span>
+            <span class="skill-badge"><i class="fas fa-users"></i> Team Coordination</span>
+            <span class="skill-badge"><i class="fas fa-calendar-check"></i> Event Management</span>
+            <span class="skill-badge"><i class="fas fa-comments"></i> Technical Communication</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LeetCode & Coding Journey Highlight Banner -->
+      <div class="leetcode-banner-card">
+        <div class="leetcode-info">
+          <div class="leetcode-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="leetcode-text">
+            <h4>Algorithmic Excellence on LeetCode</h4>
+            <p>Active problem solver currently mastering advanced Data Structures and Algorithms using Java.</p>
+          </div>
+        </div>
+
+        <div class="leetcode-stats-row">
+          <div class="lc-stat-item">
+            <span class="lc-number">54+</span>
+            <span class="lc-label">Problems Solved</span>
+          </div>
+          <div class="lc-stat-item">
+            <span class="lc-number" style="color:#06b6d4;">Java</span>
+            <span class="lc-label">Primary DSA Language</span>
+          </div>
+          <div class="lc-stat-item">
+            <span class="lc-number" style="color:#34d399;">20+</span>
+            <span class="lc-label">GitHub Repositories</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS PORTFOLIO SECTION -->
+  <section id="projects">
+    <div class="app-container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-project-diagram"></i> Portfolio</span>
+        <h2 class="section-title">Featured Projects & <span class="text-gradient">Innovations</span></h2>
+        <p class="section-desc">
+          A showcase of full-stack MERN applications, AI systems, machine learning pipelines, and responsive front-end projects built from the ground up.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="project-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects (7)</button>
+        <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+        <button class="filter-btn" data-filter="mern">MERN Stack & Full-Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend & JavaScript</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: WeatherGPT (Requested by User) -->
+        <article class="project-card" data-category="ai" id="card-weathergpt">
+          <div class="project-media-wrap">
+            <img src="assets/weathergpt.jpg" alt="WeatherGPT AI Agricultural Advisor" class="project-img" loading="lazy">
+            <span class="project-category-badge"><i class="fas fa-seedling"></i> AI Agriculture</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">WeatherGPT: Agricultural AI Advisor</h3>
+              <p class="project-desc">
+                An AI-driven climate platform developed for farmers ("for farmer's"), delivering natural language weather consultations, radar precipitation analytics, and crop advisories.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="p-tag">Python</span>
+              <span class="p-tag">OpenAI GPT</span>
+              <span class="p-tag">Weather API</span>
+              <span class="p-tag">Streamlit</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn-card-details" data-project="weathergpt">
+                <i class="fas fa-eye"></i> Case Study
+              </button>
+              <a href="https://github.com/Saddam5244/weatherGPT" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="View Source on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: AI-Based Phishing Detection & Prevention System -->
+        <article class="project-card" data-category="mern ai" id="card-phishing">
+          <div class="project-media-wrap">
+            <img src="assets/phishing.jpg" alt="AI Phishing Detection System" class="project-img" loading="lazy">
+            <span class="project-category-badge"><i class="fas fa-shield-alt"></i> MERN & AI</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">AI-Based Phishing Detection System</h3>
+              <p class="project-desc">
+                Analyzes emails, SMS, and WhatsApp messages to detect phishing attempts, identify look-alike spoof domains, and trigger real-time warning alerts with MongoDB threat logs.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="p-tag">MongoDB</span>
+              <span class="p-tag">Express.js</span>
+              <span class="p-tag">React.js</span>
+              <span class="p-tag">Node.js</span>
+              <span class="p-tag">REST APIs</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn-card-details" data-project="phishing">
+                <i class="fas fa-eye"></i> Case Study
+              </button>
+              <a href="https://github.com/Saddam5244/cyberphising" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="View Source on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Student Placement Prediction System -->
+        <article class="project-card" data-category="ai" id="card-placement">
+          <div class="project-media-wrap">
+            <img src="assets/placement.jpg" alt="Student Placement Prediction Machine Learning" class="project-img" loading="lazy">
+            <span class="project-category-badge ml"><i class="fas fa-chart-line"></i> Machine Learning</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">Student Placement Prediction ML</h3>
+              <p class="project-desc">
+                Predictive classification engine trained on 100,000 student records using Random Forest, SVM, Logistic Regression, and KNN with hyperparameter tuning and placement risk insights.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="p-tag">Python</span>
+              <span class="p-tag">Scikit-learn</span>
+              <span class="p-tag">Pandas</span>
+              <span class="p-tag">Seaborn</span>
+              <span class="p-tag">EDA</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn-card-details" data-project="placement">
+                <i class="fas fa-eye"></i> Case Study
+              </button>
+              <a href="https://github.com/Saddam5244" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="View GitHub Repos">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Laundry Services Web Application -->
+        <article class="project-card" data-category="frontend mern" id="card-laundry">
+          <div class="project-media-wrap">
+            <img src="assets/laundry.jpg" alt="Laundry Services Web Application" class="project-img" loading="lazy">
+            <span class="project-category-badge"><i class="fas fa-shopping-bag"></i> Web App</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">Laundry Services Web Application</h3>
+              <p class="project-desc">
+                Responsive web portal offering service selection, interactive cart drawer with real-time price tallying, and instant automated email booking confirmations via EmailJS.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="p-tag">HTML5</span>
+              <span class="p-tag">CSS3</span>
+              <span class="p-tag">JavaScript</span>
+              <span class="p-tag">EmailJS</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn-card-details" data-project="laundry">
+                <i class="fas fa-eye"></i> Case Study
+              </button>
+              <a href="https://github.com/Saddam5244" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="View GitHub Profile">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Agridmart-AI Platform -->
+        <article class="project-card" data-category="ai frontend" id="card-agridmart">
+          <div class="project-media-wrap" style="background: linear-gradient(135deg, #064e3b, #0f172a); display:flex; align-items:center; justify-content:center;">
+            <div style="text-align:center;">
+              <i class="fas fa-leaf" style="font-size:3.5rem; color:#10b981; filter: drop-shadow(0 0 15px #10b981);"></i>
+              <h4 style="color:#fff; margin-top:0.75rem; font-size:1.1rem;">Agridmart-AI</h4>
+            </div>
+            <span class="project-category-badge"><i class="fas fa-tractor"></i> Smart Agri</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">Agridmart-AI: Smart Agriculture</h3>
+              <p class="project-desc">
+                Digital agriculture web assistant providing disease diagnostics, crop care tips, and resource catalogs for sustainable agricultural productivity.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="p-tag">JavaScript</span>
+              <span class="p-tag">HTML5</span>
+              <span class="p-tag">CSS3</span>
+              <span class="p-tag">AI Guides</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn-card-details" data-project="agridmart">
+                <i class="fas fa-eye"></i> Case Study
+              </button>
+              <a href="https://github.com/Saddam5244/Agridmart-AI" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="View Repository on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Visitor Pass Management System -->
+        <article class="project-card" data-category="mern" id="card-visitorpass">
+          <div class="project-media-wrap" style="background: linear-gradient(135deg, #1e1b4b, #0f172a); display:flex; align-items:center; justify-content:center;">
+            <div style="text-align:center;">
+              <i class="fas fa-id-badge" style="font-size:3.5rem; color:#8b5cf6; filter: drop-shadow(0 0 15px #8b5cf6);"></i>
+              <h4 style="color:#fff; margin-top:0.75rem; font-size:1.1rem;">Visitor Pass 1.0</h4>
+            </div>
+            <span class="project-category-badge"><i class="fas fa-building"></i> Management</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">Visitor Pass Management System</h3>
+              <p class="project-desc">
+                Digital pass creation, verification, check-in and check-out timestamp logging, and administrative visitor analytics dashboard for campus & institutional security.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="p-tag">JavaScript</span>
+              <span class="p-tag">Node.js</span>
+              <span class="p-tag">Express.js</span>
+              <span class="p-tag">Database</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn-card-details" data-project="visitorpass">
+                <i class="fas fa-eye"></i> Case Study
+              </button>
+              <a href="https://github.com/Saddam5244/visitor-pass-management-system1" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="View Repository on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 7: CodeAlpha Internship Suite -->
+        <article class="project-card" data-category="frontend" id="card-codealpha">
+          <div class="project-media-wrap" style="background: linear-gradient(135deg, #0c4a6e, #0f172a); display:flex; align-items:center; justify-content:center;">
+            <div style="text-align:center;">
+              <i class="fas fa-headphones" style="font-size:3.5rem; color:#06b6d4; filter: drop-shadow(0 0 15px #06b6d4);"></i>
+              <h4 style="color:#fff; margin-top:0.75rem; font-size:1.1rem;">CodeAlpha Suite</h4>
+            </div>
+            <span class="project-category-badge"><i class="fas fa-laptop-code"></i> Frontend</span>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3 class="project-title">CodeAlpha Front-End Suite</h3>
+              <p class="project-desc">
+                Engineered 3 responsive front-end projects: an interactive Music Player, an Image Gallery with filters, and a dynamic developer portfolio during CodeAlpha internship.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="p-tag">HTML5</span>
+              <span class="p-tag">CSS3</span>
+              <span class="p-tag">JavaScript</span>
+              <span class="p-tag">Web Audio</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn-card-details" data-project="codealpha">
+                <i class="fas fa-eye"></i> Case Study
+              </button>
+              <a href="https://github.com/Saddam5244/CodeAlpha_FrontendDeveloper" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="View Repository on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & INTERNSHIP TIMELINE -->
+  <section id="experience">
+    <div class="app-container">
+      <div class="section-header">
+        <span class="section-tag purple"><i class="fas fa-briefcase"></i> Journey</span>
+        <h2 class="section-title">Experience & <span class="text-gradient">Training</span></h2>
+        <p class="section-desc">
+          Professional hands-on experience in modern frontend development and industry-aligned masterclasses.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-node"><i class="fas fa-laptop-code"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Front-End Developer Intern</h3>
+              <span class="timeline-period">Feb 2026 – Mar 2026</span>
+            </div>
+            <div class="timeline-org">CodeAlpha • Remote Internship</div>
+            <ul class="timeline-points">
+              <li>Built three front-end projects: an interactive <strong>Music Player</strong>, a responsive <strong>Image Gallery</strong>, and a modern <strong>Developer Portfolio</strong> using semantic HTML, CSS, and JavaScript.</li>
+              <li>Applied responsive web design, mobile-first layouts, and cross-browser modern front-end best practices while completing assigned deliverables.</li>
+              <li>Collaborated on code reviews, Git repository hygiene, and clean asset structure.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-node violet"><i class="fas fa-code"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Full Stack Development MasterClass</h3>
+              <span class="timeline-period">2026 (30 Days)</span>
+            </div>
+            <div class="timeline-org">NoviTech R&D Pvt. Ltd.</div>
+            <ul class="timeline-points">
+              <li>30-day rigorous immersive training on full-stack web engineering with React, Node.js, Express, and database architecture.</li>
+              <li>Built backend REST endpoints, handled authentication workflows, and connected dynamic frontend user experiences.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-node"><i class="fas fa-cloud"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Virtual Internship Program</h3>
+              <span class="timeline-period">ServiceNow • AICTE & SmartBridge</span>
+            </div>
+            <div class="timeline-org">ServiceNow with AICTE and SmartBridge</div>
+            <ul class="timeline-points">
+              <li>Engaged in cloud platform workflows, automated service ticket handling, and enterprise digital transformation patterns.</li>
+              <li>Completed practical modules aligning with industry software deployment standards.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item">
+          <div class="timeline-node violet"><i class="fas fa-user-tie"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">TCS iON Career Edge – Young Professional</h3>
+              <span class="timeline-period">Jan 2026 – Feb 2026</span>
+            </div>
+            <div class="timeline-org">Tata Consultancy Services (TCS iON)</div>
+            <ul class="timeline-points">
+              <li>Trained in business etiquette, professional presentation, problem-solving, and foundational corporate readiness.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS SECTION -->
+  <section id="education">
+    <div class="app-container">
+      <div class="section-header">
+        <span class="section-tag emerald"><i class="fas fa-graduation-cap"></i> Academics & Credentials</span>
+        <h2 class="section-title">Education & <span class="text-gradient">Certifications</span></h2>
+        <p class="section-desc">
+          Rigorous academic foundation in Computer Science & Engineering supplemented by recognized industry certifications.
+        </p>
+      </div>
+
+      <div class="edu-cert-grid">
+        
+        <!-- Left: Education Column -->
+        <div>
+          <h3 class="section-subheading"><i class="fas fa-university text-gradient"></i> Academic Background</h3>
+          <div class="edu-stack">
+            
+            <!-- B.Tech -->
+            <div class="edu-card">
+              <div class="edu-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+              <div class="edu-details">
+                <h4>B.Tech in Computer Science & Engineering</h4>
+                <div class="edu-school">Uttar Pradesh Textile Technology Institute (UPTTI), Kanpur</div>
+                <div style="font-size:0.82rem; color:var(--text-subtle); margin-bottom:0.75rem;">2024 – 2028 (Currently in 3rd Year)</div>
+                <div class="edu-grades-row">
+                  <span class="grade-badge"><i class="fas fa-star"></i> Year 2 YGPA: 9.40 (2025–2026)</span>
+                  <span class="grade-badge"><i class="fas fa-check"></i> Year 1 YGPA: 8.41 (2024–2025)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Intermediate -->
+            <div class="edu-card">
+              <div class="edu-icon-wrap" style="color:#8b5cf6; background:rgba(139,92,246,0.12);"><i class="fas fa-school"></i></div>
+              <div class="edu-details">
+                <h4>Intermediate (Science)</h4>
+                <div class="edu-school">Shibli National Inter College, Azamgarh</div>
+                <div style="font-size:0.82rem; color:var(--text-subtle); margin-bottom:0.75rem;">2021 – 2022</div>
+                <div class="edu-grades-row">
+                  <span class="grade-badge" style="color:#a78bfa; border-color:rgba(139,92,246,0.3); background:rgba(139,92,246,0.12);"><i class="fas fa-percentage"></i> Score: 80.00%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- High School -->
+            <div class="edu-card">
+              <div class="edu-icon-wrap" style="color:#f59e0b; background:rgba(245,158,11,0.12);"><i class="fas fa-book"></i></div>
+              <div class="edu-details">
+                <h4>High School</h4>
+                <div class="edu-school">Shibli National Inter College, Azamgarh</div>
+                <div style="font-size:0.82rem; color:var(--text-subtle); margin-bottom:0.75rem;">2019 – 2020</div>
+                <div class="edu-grades-row">
+                  <span class="grade-badge" style="color:#fbbf24; border-color:rgba(245,158,11,0.3); background:rgba(245,158,11,0.12);"><i class="fas fa-percentage"></i> Score: 83.33%</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Certifications Column -->
+        <div>
+          <h3 class="section-subheading"><i class="fas fa-certificate text-gradient-purple"></i> Certifications & Training</h3>
+          <div class="cert-list">
+            
+            <div class="cert-item">
+              <div class="cert-info">
+                <h5>Frontend Development Internship</h5>
+                <p>CodeAlpha Organization</p>
+              </div>
+              <span class="cert-date">Feb 2026</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <h5>Web Design & Development</h5>
+                <p>NSDC via Skill India Digital Hub</p>
+              </div>
+              <span class="cert-date">Jan 2026</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <h5>Virtual Internship Program</h5>
+                <p>ServiceNow with AICTE and SmartBridge</p>
+              </div>
+              <span class="cert-date">2026</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <h5>TCS iON Career Edge – Young Professional</h5>
+                <p>Tata Consultancy Services (TCS iON)</p>
+              </div>
+              <span class="cert-date">Feb 2026</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <h5>Full Stack Development MasterClass</h5>
+                <p>NoviTech R&D Pvt. Ltd. (30 Days intensive)</p>
+              </div>
+              <span class="cert-date">2026</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <h5>C Programming: Zero to Hero 3.0</h5>
+                <p>STBG Academy</p>
+              </div>
+              <span class="cert-date">Nov 2024</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <h5>Basic Computer Course (BCC)</h5>
+                <p>STP Computer Education</p>
+              </div>
+              <span class="cert-date">Nov 2024 – Feb 2025</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="app-container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-envelope-open-text"></i> Connect</span>
+        <h2 class="section-title">Get In Touch, <span class="text-gradient">Let's Build Something Great</span></h2>
+        <p class="section-desc">
+          I'm actively open for internship opportunities, project collaborations, and full-stack software development discussions.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Direct contact items -->
+        <div class="contact-info-panel">
+          <div class="contact-direct-items">
+            
+            <a href="mailto:ahmadsaddam443@gmail.com" class="contact-channel" id="contact-link-email">
+              <div class="channel-icon"><i class="fas fa-envelope"></i></div>
+              <div class="channel-text">
+                <span>Email Address</span>
+                <h4>ahmadsaddam443@gmail.com</h4>
+              </div>
+            </a>
+
+            <a href="tel:+919648905244" class="contact-channel" id="contact-link-phone">
+              <div class="channel-icon violet"><i class="fas fa-phone-alt"></i></div>
+              <div class="channel-text">
+                <span>Phone / WhatsApp</span>
+                <h4>+91 9648905244</h4>
+              </div>
+            </a>
+
+            <div class="contact-channel">
+              <div class="channel-icon emerald"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="channel-text">
+                <span>Location</span>
+                <h4>Azamgarh & Kanpur, Uttar Pradesh, India</h4>
+              </div>
+            </div>
+
+            <a href="https://github.com/Saddam5244" target="_blank" rel="noopener noreferrer" class="contact-channel" id="contact-link-github">
+              <div class="channel-icon"><i class="fab fa-github"></i></div>
+              <div class="channel-text">
+                <span>GitHub Repository</span>
+                <h4>github.com/Saddam5244</h4>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/saddam-ahmad-020430323" target="_blank" rel="noopener noreferrer" class="contact-channel" id="contact-link-linkedin">
+              <div class="channel-icon violet"><i class="fab fa-linkedin-in"></i></div>
+              <div class="channel-text">
+                <span>LinkedIn Profile</span>
+                <h4>in/saddam-ahmad-020430323</h4>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Right: Interactive Contact Form -->
+        <div class="contact-form-card">
+          <form id="contact-form">
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="contact-name">Your Name *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+              </div>
+              <div class="form-field">
+                <label for="contact-email">Your Email *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. rahul@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Internship Inquiry / Web Development Project">
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Hello Saddam, I saw your portfolio and project WeatherGPT..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-form-submit" id="btn-submit-contact">
+              <i class="fas fa-paper-plane"></i> Send Message Directly
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="app-container">
+
+
+
+      <!-- Main Footer Columns -->
+      <div class="footer-main-grid">
+
+        <!-- Col 1: Bio & Status -->
+        <div class="footer-col footer-col-brand">
+          <div class="brand-logo" style="margin-bottom:1rem;">
+            <div class="brand-badge">SA</div>
+            <span>Saddam<span class="text-gradient">.dev</span></span>
+          </div>
+          <p class="footer-bio-text">
+            B.Tech CSE student (UPTTI Kanpur) & MERN Stack developer passionate about AI integrations, performant architectures, and crafting intuitive digital experiences.
+          </p>
+          <div class="footer-location-chip">
+            <i class="fas fa-map-marker-alt text-gradient"></i>
+            <span>Kanpur & Azamgarh, Uttar Pradesh, India</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#about"><i class="fas fa-chevron-right"></i> About Saddam</a></li>
+            <li><a href="#skills"><i class="fas fa-chevron-right"></i> Technical Skills</a></li>
+            <li><a href="#projects"><i class="fas fa-chevron-right"></i> Featured Projects</a></li>
+            <li><a href="#experience"><i class="fas fa-chevron-right"></i> Work Experience</a></li>
+            <li><a href="#education"><i class="fas fa-chevron-right"></i> Education & Degrees</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Send a Message</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Highlight Projects -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Featured Works</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#card-weathergpt"><i class="fas fa-wind text-gradient"></i> WeatherGPT AI</a></li>
+            <li><a href="#card-phishing"><i class="fas fa-shield-alt text-gradient-purple"></i> Phishing Detection</a></li>
+            <li><a href="#card-placement"><i class="fas fa-brain text-gradient-emerald"></i> Placement Predictor</a></li>
+            <li><a href="#card-laundry"><i class="fas fa-tshirt" style="color:#06b6d4;"></i> Laundry Web App</a></li>
+            <li><a href="#card-codealpha"><i class="fas fa-laptop-code" style="color:#8b5cf6;"></i> CodeAlpha Suite</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Google & Social Sticks / Badges -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Connect & Social Sticks</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
+            Direct interactive channels to connect, collaborate, or inspect my work:
+          </p>
+          <div class="footer-stick-badges">
+            <!-- Google / Gmail Stick -->
+            <a href="mailto:ahmadsaddam443@gmail.com" class="social-stick-pill stick-google" title="Connect via Google / Gmail">
+              <span class="stick-icon-wrap"><i class="fab fa-google"></i></span>
+              <span class="stick-label">Google / Gmail</span>
+            </a>
+            <!-- GitHub Stick -->
+            <a href="https://github.com/Saddam5244" target="_blank" rel="noopener noreferrer" class="social-stick-pill stick-github" title="View GitHub Repos">
+              <span class="stick-icon-wrap"><i class="fab fa-github"></i></span>
+              <span class="stick-label">GitHub</span>
+            </a>
+            <!-- LinkedIn Stick -->
+            <a href="https://linkedin.com/in/saddam-ahmad-020430323" target="_blank" rel="noopener noreferrer" class="social-stick-pill stick-linkedin" title="Connect on LinkedIn">
+              <span class="stick-icon-wrap"><i class="fab fa-linkedin-in"></i></span>
+              <span class="stick-label">LinkedIn</span>
+            </a>
+            <!-- LeetCode Stick -->
+            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="social-stick-pill stick-leetcode" title="LeetCode 54+ Problems">
+              <span class="stick-icon-wrap"><i class="fas fa-code"></i></span>
+              <span class="stick-label">LeetCode (54+)</span>
+            </a>
+            <!-- YouTube Stick -->
+            <a href="https://youtube.com/@NeuralTalesSaddam" target="_blank" rel="noopener noreferrer" class="social-stick-pill stick-youtube" title="Watch on YouTube">
+              <span class="stick-icon-wrap"><i class="fab fa-youtube"></i></span>
+              <span class="stick-label">YouTube</span>
+            </a>
+            <!-- X / Twitter Stick -->
+            <a href="https://x.com/saddam8424" target="_blank" rel="noopener noreferrer" class="social-stick-pill stick-x" title="Follow on X">
+              <span class="stick-icon-wrap"><i class="fab fa-x-twitter"></i></span>
+              <span class="stick-label">X (Twitter)</span>
+            </a>
+            <!-- Instagram Stick -->
+            <a href="https://instagram.com/jawan8423" target="_blank" rel="noopener noreferrer" class="social-stick-pill stick-instagram" title="Follow on Instagram">
+              <span class="stick-icon-wrap"><i class="fab fa-instagram"></i></span>
+              <span class="stick-label">Instagram</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech Stickers / Interactive Chips Shelf -->
+      <div class="footer-tech-stickers-bar">
+        <span class="tech-stickers-label"><i class="fas fa-microchip text-gradient"></i> Core Stack & Tools:</span>
+        <div class="tech-stickers-wrap">
+          <span class="tech-sticker-badge"><i class="fab fa-google" style="color:#ea4335;"></i> Google Fonts</span>
+          <span class="tech-sticker-badge"><i class="fab fa-react" style="color:#61dafb;"></i> React.js</span>
+          <span class="tech-sticker-badge"><i class="fab fa-node-js" style="color:#68a063;"></i> Node.js</span>
+          <span class="tech-sticker-badge"><i class="fas fa-database" style="color:#47a248;"></i> MongoDB</span>
+          <span class="tech-sticker-badge"><i class="fab fa-python" style="color:#3776ab;"></i> Python AI</span>
+          <span class="tech-sticker-badge"><i class="fab fa-js-square" style="color:#f7df1e;"></i> JavaScript ES6+</span>
+          <span class="tech-sticker-badge"><i class="fas fa-bolt" style="color:#bd34fe;"></i> Vite 8</span>
+          <span class="tech-sticker-badge"><i class="fas fa-fire" style="color:#ffca28;"></i> Firebase Auth</span>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <span>&copy; 2026 Saddam Ahmad. All rights reserved. Handcrafted with precision &amp; modern web standards.</span>
+        </div>
+        <div class="footer-sub-details">
+          <span class="badge-engineered"><i class="fas fa-shield-alt text-gradient"></i> High Performance &bull; 100% Responsive</span>
+        </div>
+        <button class="btn-back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Back to top" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: PROJECT CASE STUDY DETAIL MODAL -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span id="modal-project-category" class="section-tag" style="margin-bottom:0.4rem;">Category</span>
+          <h3 id="modal-project-title">Project Case Study</h3>
+        </div>
+        <button class="btn-modal-close" id="btn-close-project-modal" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h4 style="color:#67e8f9; margin-bottom:0.5rem; font-size:1.05rem;">Project Overview</h4>
+          <p id="modal-project-summary" style="line-height:1.7; color:#cbd5e1;"></p>
+        </div>
+
+        <div>
+          <h4 style="color:#67e8f9; margin-bottom:0.5rem; font-size:1.05rem;">Core Features & Capabilities</h4>
+          <ul id="modal-project-features" class="spotlight-features-list" style="margin:0;"></ul>
+        </div>
+
+        <div>
+          <h4 style="color:#67e8f9; margin-bottom:0.5rem; font-size:1.05rem;">Technologies & Tools</h4>
+          <div id="modal-project-tech" class="project-tags"></div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-light); padding:1.25rem; border-radius:var(--radius-md);">
+          <h4 style="color:#34d399; margin-bottom:0.35rem; font-size:0.95rem;"><i class="fas fa-chart-line"></i> Technical Impact & Results</h4>
+          <p id="modal-project-impact" style="font-size:0.92rem; color:#e2e8f0;"></p>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:1rem; margin-top:1rem;">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" id="modal-project-repo">
+            <i class="fab fa-github"></i> View GitHub Repository
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: INTERACTIVE RESUME / CV VIEWER MODAL -->
+  <div class="modal-overlay" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-title">
+    <div class="modal-container" style="max-width:900px;">
+      <div class="modal-header">
+        <h3 id="resume-title"><i class="fas fa-file-alt text-gradient"></i> Curriculum Vitae • Saddam Ahmad</h3>
+        <button class="btn-modal-close" id="btn-close-resume-modal" aria-label="Close CV modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="padding:1.5rem 2rem;">
+        
+        <div class="resume-modal-content">
+          <div class="resume-paper-header">
+            <div>
+              <h2>SADDAM AHMAD</h2>
+              <p>MERN Stack Developer & Software Engineer</p>
+              <div style="font-size:0.85rem; color:var(--text-muted); margin-top:0.4rem;">
+                Azamgarh, Uttar Pradesh, India • +91 9648905244 • ahmadsaddam443@gmail.com
+              </div>
+            </div>
+            <div style="display:flex; gap:0.5rem; font-size:0.85rem;">
+              <a href="https://github.com/Saddam5244" target="_blank" class="grade-badge"><i class="fab fa-github"></i> Saddam5244</a>
+              <a href="https://linkedin.com/in/saddam-ahmad-020430323" target="_blank" class="grade-badge"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <h4 class="resume-section-title">Professional Summary</h4>
+          <p style="font-size:0.9rem; color:#cbd5e1; line-height:1.7;">
+            B.Tech Computer Science & Engineering student (3rd year) at Uttar Pradesh Textile Technology Institute (UPTTI), Kanpur. Skilled in full-stack web development with MongoDB, Express.js, React.js, Node.js, REST APIs, and database integration. Completed a Front-End Developer internship at CodeAlpha, developed an AI-based Phishing Detection System, and created WeatherGPT for agricultural forecasting. Solved 54+ problems on LeetCode and actively mastering Data Structures and Algorithms with Java.
+          </p>
+
+          <!-- Education -->
+          <h4 class="resume-section-title">Education</h4>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.88rem;">
+            <div>
+              <strong>B.Tech, Computer Science & Engineering</strong> | 2024 – 2028<br>
+              <span style="color:var(--text-muted);">Uttar Pradesh Textile Technology Institute (UPTTI), Kanpur</span><br>
+              <span style="color:#34d399;">• YGPA: 8.41 (Year 1, 2024–2025) | YGPA: 9.40 (Year 2, 2025–2026)</span>
+            </div>
+            <div>
+              <strong>Intermediate (Science)</strong> | 2021 – 2022 | 80%<br>
+              <span style="color:var(--text-muted);">Shibli National Inter College, Azamgarh</span>
+            </div>
+            <div>
+              <strong>High School</strong> | 2019 – 2020 | 83.33%<br>
+              <span style="color:var(--text-muted);">Shibli National Inter College, Azamgarh</span>
+            </div>
+          </div>
+
+          <!-- Technical Skills -->
+          <h4 class="resume-section-title">Technical Skills</h4>
+          <div style="font-size:0.88rem; color:#cbd5e1; line-height:1.7;">
+            <strong>Languages:</strong> Java, C, JavaScript, Python<br>
+            <strong>Web Development:</strong> HTML5, CSS3, Tailwind CSS, Bootstrap, React.js, Node.js, Express.js, REST APIs, EmailJS<br>
+            <strong>Databases & Cloud:</strong> MongoDB, Firebase Hosting, Firebase Authentication<br>
+            <strong>Developer Tools:</strong> Git & GitHub, Postman, MS Office, Video Editing
+          </div>
+
+          <!-- Experience -->
+          <h4 class="resume-section-title">Work Experience</h4>
+          <div style="font-size:0.88rem; color:#cbd5e1; line-height:1.6;">
+            <strong>Front-End Developer Intern – CodeAlpha</strong> | Feb 2026 – Mar 2026<br>
+            • Built three front-end projects (Image Gallery, Portfolio, Music Player) using HTML, CSS, and JavaScript.<br>
+            • Applied responsive design and modern front-end practices while completing assigned tasks.
+          </div>
+
+          <!-- Projects -->
+          <h4 class="resume-section-title">Key Projects</h4>
+          <div style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.88rem; color:#cbd5e1;">
+            <div>
+              <strong>WeatherGPT: AI Agriculture & Weather Advisor</strong> (Python, OpenAI GPT, Weather APIs)<br>
+              • Real-time climate forecasts and AI agronomy guidance tailored for farmers.
+            </div>
+            <div>
+              <strong>AI-Based Phishing Detection & Prevention System</strong> (MERN Stack)<br>
+              • Analyzes emails, SMS, and WhatsApp messages to identify malicious links, spoof domains, and threat logs in MongoDB.
+            </div>
+            <div>
+              <strong>Laundry Services Web Application</strong> (HTML, CSS, JavaScript, EmailJS)<br>
+              • Dynamic shopping cart with total calculation and instant confirmation emails via EmailJS.
+            </div>
+            <div>
+              <strong>Student Placement Prediction System</strong> (Machine Learning, Python)<br>
+              • Trained Random Forest, SVM, Logistic Regression on 100k records for student risk analytics.
+            </div>
+          </div>
+
+          <!-- Leadership & Achievements -->
+          <h4 class="resume-section-title">Leadership & Campus Responsibilities</h4>
+          <div style="font-size:0.88rem; color:#cbd5e1; line-height:1.6;">
+            • <strong>Coordinator, Activity Club – UPTTI Kanpur:</strong> Organized technical and cultural events.<br>
+            • <strong>Co-Coordinator, Social Service Club – UPTTI Kanpur:</strong> Supported social awareness and community drives.
+          </div>
+        </div>
+
+      </div>
+      <div class="resume-modal-actions">
+        <a href="assets/Saddam_Ahmad_Resume.pdf" download="Saddam_Ahmad_Resume.pdf" class="btn-primary" id="btn-download-resume">
+          <i class="fas fa-file-download"></i> Download CV (PDF)
+        </a>
+        <button class="btn-secondary" id="btn-print-resume">
+          <i class="fas fa-print"></i> Print / Save PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="main.js"></script>
+  <script>
+    // Offline / direct file:// opening fallback
+    if (window.location.protocol === 'file:') {
+      const s = document.createElement('script');
+      s.src = 'main.js';
+      document.body.appendChild(s);
+    }
+  </script>
+</body>
+</html>
