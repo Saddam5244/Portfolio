@@ -1,6 +1,7 @@
 {
   "name": "protfollio",
   "version": "1.0.0",
+  "homepage": "https://portfolio-508e0.web.app",
   "type": "module",
   "description": "",
   "main": "index.js",

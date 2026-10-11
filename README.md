@@ -1,5 +1,13 @@
 # 🌟 Saddam Ahmad - Modern Developer Portfolio
 
+[![Firebase Hosting](https://img.shields.io/badge/Live_Demo-Firebase_Hosting-FFA000?style=for-the-badge&logo=firebase&logoColor=white)](https://portfolio-508e0.web.app)
+[![GitHub Pages](https://img.shields.io/badge/Live_Demo-GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://saddam5244.github.io/Portfolio/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/Saddam5244/Portfolio)
+
+> 🔗 **Live Deployment Links:**
+> - 🌐 **Firebase Hosting (Primary):** [https://portfolio-508e0.web.app](https://portfolio-508e0.web.app) *(Alternative: [https://portfolio-508e0.firebaseapp.com](https://portfolio-508e0.firebaseapp.com))*
+> - 🚀 **GitHub Pages:** [https://saddam5244.github.io/Portfolio/](https://saddam5244.github.io/Portfolio/)
+
 An award-winning, responsive developer portfolio engineered for **Saddam Ahmad** (MERN Stack Developer & B.Tech CSE student at **Uttar Pradesh Textile Technology Institute (UPTTI), Kanpur**).
 
 Designed with a **Midnight Cyber-Glassmorphism** aesthetic, interactive constellation particles, ambient animated glow orbs, and full mobile responsiveness.
